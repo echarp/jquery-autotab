@@ -45,7 +45,7 @@
             originalValue: '',
             changed: false,
             editable: (e.type === 'text' || e.type === 'password' || e.type === 'textarea' || e.type === 'tel' || e.type === 'number' || e.type === 'email' || e.type === 'search' || e.type === 'url'),
-            filterable: (e.type === 'text' || e.type === 'password' || e.type === 'textarea'),
+            filterable: (e.type === 'text' || e.type === 'password' || e.type === 'email' || e.type === 'textarea'),
             tabOnSelect: false
         };
 
@@ -89,7 +89,7 @@
             end = 0,
             selectionType = 0;
 
-        if (e.type === 'text' || e.type === 'password' || e.type === 'textarea') {
+        if (e.type === 'text' || e.type === 'password' || e.type === 'email' || e.type === 'textarea') {
             if (typeof e.selectionStart === 'number' && typeof e.selectionEnd === 'number') {
                 // Non-IE browsers and IE 9+
                 start = e.selectionStart;
